@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [DashboardController::class, 'index'])->name('Dashboard');
-Route::get('/index', [DashboardController::class, 'index'])->name('Dashboard');
-Route::get('/cadastro', [CadastroController::class, 'cadastro'])->name('CadastroAnimais');
+Route::get('/', [CadastroController::class, 'index'])->name('Dashboard');
+Route::get('/index', [CadastroController::class, 'index'])->name('Dashboard');
+Route::get('/index/cadastro', [CadastroController::class, 'cadastro'])->name('CadastroAnimais');
+
+Route::post('/cadastro', [CadastroController::class, 'store'])->name('CadastroAnimais');
+

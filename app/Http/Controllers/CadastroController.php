@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\cadastroanimais;
 use Illuminate\Http\Request;
 
 class CadastroController extends Controller
@@ -9,10 +11,20 @@ class CadastroController extends Controller
     /**
      * Exibir uma listagem do recurso.
      */
-    public function cadastro()
-    {
-        return view('cadastro');
-    }
+
+     public function index()
+     {
+        return view('index');
+     }
+
+     public function cadastro()
+     {
+
+        $registro = cadastroanimais::all();
+        return view('cadastro', compact('cadastro'));
+
+     }
+
 
     /**
      * Mostre o formulário para criar um novo recurso.
@@ -27,7 +39,11 @@ class CadastroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $registro = new cadastroanimais;
+        $registro->fill($request->all());
+        $registro->save();
+
+        return redirect()->route('pesquisa')->with('success', 'Guia de recolhimento cadastrada com sucesso.');
     }
 
     /**
