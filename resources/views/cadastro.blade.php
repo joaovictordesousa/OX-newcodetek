@@ -1,10 +1,10 @@
 @include('cabecalho.cabecalho')
 
-  <form action="/cadastro" class="row g-3" style="width: 70%" method="POST">
-
+  <form action="{{ route('NovoCadastro.store') }}" class="row g-3" style="width: 70%" method="POST">
+    @csrf
     <div class="col-12"> 
       <label for="inputAddress" class="form-label">Numero do Animal</label>
-      <input type="number" class="form-control" id="nranimal" placeholder="Numero do Animal" required>
+      <input type="number" class="form-control" id="nranimal" name="nranimal" required>
     </div>
 
     <div class="col-12"> 
