@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [CadastroController::class, 'index'])->name('index');
 Route::get('/index', [CadastroController::class, 'index'])->name('index');
 Route::get('/index/cadastro', [CadastroController::class, 'cadastro'])->name('NovoCadastro');
+Route::get('/index/relatoriomes', [CadastroController::class, 'relatoriomes'])->name('relatorio.mes');
 
 Route::post('/cadastro', [CadastroController::class, 'store'])->name('NovoCadastro.store');
 

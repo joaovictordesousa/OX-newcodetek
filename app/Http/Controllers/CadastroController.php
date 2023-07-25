@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Registro;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CadastroController extends Controller
 {
@@ -14,13 +15,19 @@ class CadastroController extends Controller
 
      public function index()
      {
-
-        $registro = Registro::all();
+        $registro = Registro::paginate(10);
 
         // Passe os registros para a view "index.blade.php"
         return view('index', [
             'registro' => $registro
         ]);
+
+     }
+
+     public function relatoriomes()
+     {
+
+        return view('relatoriomes');
 
      }
 

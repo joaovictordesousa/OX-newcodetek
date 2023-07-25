@@ -22,3 +22,10 @@ th {
 td {
     font-size: 17px;
 }
+
+.titulo_relatoriomes {
+    font-size: 35px;
+    margin: 1em 0 2em 0;
+    color: gray;
+}
+
