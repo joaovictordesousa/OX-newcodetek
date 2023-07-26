@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ReportController;
+use App\Http\Controllers\SheetController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,12 +17,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [CadastroController::class, 'index'])->name('index');
-Route::get('/index', [CadastroController::class, 'index'])->name('index');
-Route::get('/index/cadastro', [CadastroController::class, 'cadastro'])->name('NovoCadastro');
-Route::get('/index/relatoriomes', [CadastroController::class, 'relatoriomes'])->name('relatorio.mes');
+Route::get('/', [SheetController::class, 'index'])->name('sheet.index');
+Route::get('/home', [SheetController::class, 'index'])->name('sheet.index');
+Route::get('/home/create', [SheetController::class, 'create'])->name('sheet.create');
+Route::post('/home', [SheetController::class, 'store'])->name('sheet.store');
+Route::get('/home/{sheet}/show', [SheetController::class, 'show'])->name('sheet.show');
+Route::get('/home/{sheet}/edit', [SheetController::class, 'edit'])->name('sheet.edit');
+Route::put('/registros/{sheet}', [SheetController::class, 'update'])->name('sheet.update');
 
-Route::post('/cadastro', [CadastroController::class, 'store'])->name('NovoCadastro.store');
-
-Route::delete('/registros/{id}', [CadastroController::class, 'destroy'])->name('deletarRegistro');
+Route::get('/report', [ReportController::class, 'index'])->name('report.index');
+Route::post('/report', [ReportController::class, 'GetReports'])->name('report.GetReports');
+Route::get('/report/{de}/{ate}', [ReportController::class, 'index'])->name('report.results');
 
