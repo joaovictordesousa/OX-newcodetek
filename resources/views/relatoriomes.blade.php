@@ -1,12 +1,9 @@
 @include('cabecalho.cabecalho')
 
-  <form action="{{ route('NovoCadastro.store') }}" class="row g-3" style="width: 70%" method="POST">
-    @csrf
-    <div class="col-12"> 
-      <label for="inputAddress" class="form-label">Numero do Animal</label>
-      <input type="number" class="form-control" id="nranimal" name="nranimal" required>
-    </div>
+<h1 class="titulo_relatoriomes">Relatorio do mês</h1>
 
+<form action="{{ route('NovoCadastro.store') }}" class="row g-3" style="width: 70%" method="POST">
+    @csrf
     <div class="col-12"> 
     <label for="inputAddress" class="form-label">Raça do touro</label>
     <select class="form-select" aria-label="Default select example" id="racaboi" name="racaboi" required>
@@ -26,16 +23,25 @@
     </select>
     </div>
 
-    <div class="col-md-6">
-      <label for="dtinseminacao" class="form-label">Dia do inseminação</label>
-      <input type="date" class="form-control" id="dtinseminacao" name="dtinseminacao" required>
+    <div class="col-12"> 
+    <label for="inputAddress" class="form-label">Data do relatorio</label>
+    <div class="input-group mb-3">
+        <input type="date" class="form-control" placeholder="Username" aria-label="Username">
+        <span class="input-group-text">a</span>
+        <input type="date" class="form-control" placeholder="Server" aria-label="Server">
+      </div>
     </div>
-    <div class="col-md-6">
-      <label for="dtprevista" class="form-label">Data prevista para parir</label>
-      <input type="date" class="form-control" id="dtprevista" name="dtprevista" required>
-    </div>
+
     <div class="col-12">
       <button type="submit" class="btn btn-primary">CADASTRAR</button>
     </div>
   </form>
+  
 
+@yield('scripts')
+<script src="js/color-modes.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"     ></script>
+
+</body>
+</html>

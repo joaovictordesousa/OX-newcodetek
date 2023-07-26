@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\cadastroanimais;
+use App\Models\Registro;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CadastroController extends Controller
 {
@@ -14,14 +15,25 @@ class CadastroController extends Controller
 
      public function index()
      {
-        return view('index');
+        $registro = Registro::paginate(10);
+
+        // Passe os registros para a view "index.blade.php"
+        return view('index', [
+            'registro' => $registro
+        ]);
+
+     }
+
+     public function relatoriomes()
+     {
+
+        return view('relatoriomes');
+
      }
 
      public function cadastro()
      {
-
-        $registro = cadastroanimais::all();
-        return view('cadastro', compact('cadastro'));
+        return view('cadastro');
 
      }
 
@@ -31,7 +43,7 @@ class CadastroController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -39,12 +51,26 @@ class CadastroController extends Controller
      */
     public function store(Request $request)
     {
-        $registro = new cadastroanimais;
+        $registro = $request->validate([
+            'nranimal' => 'required|numeric',
+            'racaboi' => 'required|string',
+            'dtinseminacao' => 'required|date',
+            'dtprevista' => 'required|date',
+        ]);
+
+        // dd($registro);        
+        // Create a new registro instance and fill it with the validated form data
+
+        $registro = new Registro;
         $registro->fill($request->all());
         $registro->save();
 
-        return redirect()->route('pesquisa')->with('success', 'Guia de recolhimento cadastrada com sucesso.');
+        
+
+        return redirect()->route('index')->with('success', 'Cadastrado com sucesso.');
+
     }
+
 
     /**
      * Display the specified resource.
@@ -75,6 +101,6 @@ class CadastroController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+
     }
 }

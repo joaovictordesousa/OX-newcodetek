@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('registro', function (Blueprint $table) {
             $table->id();
-            $table->integer('nranimal');
+            $table->integer('nranimal'); // Adicione o valor padrão aqui (neste exemplo, o valor padrão é 0)
             $table->string('racaboi');
             $table->date('dtinseminacao');
             $table->date('dtprevista');

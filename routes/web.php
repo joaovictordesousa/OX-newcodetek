@@ -15,9 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [CadastroController::class, 'index'])->name('Dashboard');
-Route::get('/index', [CadastroController::class, 'index'])->name('Dashboard');
-Route::get('/index/cadastro', [CadastroController::class, 'cadastro'])->name('CadastroAnimais');
+Route::get('/', [CadastroController::class, 'index'])->name('index');
+Route::get('/index', [CadastroController::class, 'index'])->name('index');
+Route::get('/index/cadastro', [CadastroController::class, 'cadastro'])->name('NovoCadastro');
+Route::get('/index/relatoriomes', [CadastroController::class, 'relatoriomes'])->name('relatorio.mes');
 
-Route::post('/cadastro', [CadastroController::class, 'store'])->name('CadastroAnimais');
+Route::post('/cadastro', [CadastroController::class, 'store'])->name('NovoCadastro.store');
+
+Route::delete('/registros/{id}', [CadastroController::class, 'destroy'])->name('deletarRegistro');
 

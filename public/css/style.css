@@ -3,6 +3,10 @@
     margin: 1em 0;
 }
 
+.titulo_historico_animais {
+    margin: 0 0 2em 0;
+}
+
 .table col {
     font-size: 30px;
 }
@@ -10,3 +14,18 @@
 .form-label {
     font-size: 20px;
 }
+
+th {
+    font-size: 17px;
+}
+
+td {
+    font-size: 17px;
+}
+
+.titulo_relatoriomes {
+    font-size: 35px;
+    margin: 1em 0 2em 0;
+    color: gray;
+}
+
