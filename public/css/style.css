@@ -25,7 +25,18 @@ td {
 
 .titulo_relatoriomes {
     font-size: 35px;
-    margin: 1em 0 2em 0;
     color: gray;
 }
 
+.form-label {
+    font-size: 17px;
+}
+
+#container_divs_cadastro {
+    margin: 10px 0;
+    padding: 2em;
+}
+
+#container_divs_cadastro input {
+    border: 2px solid rgb(202, 200, 200);
+}
