@@ -24,6 +24,7 @@
     <h2 class="titulo_historico_animais">Historico de animais</h2>
     <div class="table-responsive small">
         <table class="table table-striped table-sm">
+
             <thead>
                 <tr>
                     <th>Nome ou
@@ -63,6 +64,7 @@
                     </tr>
                 @endforeach
             </tbody>
+
         </table>
         {{-- {{$AllSheet->appends([
           'search' => request()->get('search','')
