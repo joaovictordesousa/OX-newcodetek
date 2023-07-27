@@ -25,7 +25,9 @@ Route::get('/home/{sheet}/show', [SheetController::class, 'show'])->name('sheet.
 Route::get('/home/{sheet}/edit', [SheetController::class, 'edit'])->name('sheet.edit');
 Route::put('/registros/{sheet}', [SheetController::class, 'update'])->name('sheet.update');
 
+
 Route::get('/report', [ReportController::class, 'index'])->name('report.index');
 Route::post('/report', [ReportController::class, 'GetReports'])->name('report.GetReports');
 Route::get('/report/{de}/{ate}', [ReportController::class, 'index'])->name('report.results');
+
 

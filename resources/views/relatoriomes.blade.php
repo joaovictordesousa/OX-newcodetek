@@ -17,7 +17,7 @@
     </div>
 
     <div class="col-12">
-      <button type="submit" class="btn btn-primary">CADASTRAR</button>
+      <button type="submit" class="btn btn-primary">Imprimir</button>
     </div>
   </form>
   
