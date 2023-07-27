@@ -48,13 +48,13 @@
                         <td>{{ $sheet->inseminator_name }}</td>
                         <td>{{ $sheet->insemination_date }}</td>
                         <td>
-                            <a type="button" class="btn btn-secondary"
+                            <a type="button" class="btn btn-success"
                                 href="{{ route('sheet.show', ['sheet' => $sheet->id]) }}">
                                 <ion-icon name="eye-outline"></ion-icon>
                             </a>
                         </td>
                         <td>
-                            <a type="button" class="btn btn-secondary"
+                            <a type="button" class="btn btn-primary"
                                 href="{{ route('sheet.edit', ['sheet' => $sheet->id]) }}"><ion-icon name="pencil-outline"></ion-icon></a>
                         </td>
 
