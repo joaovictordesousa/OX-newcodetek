@@ -22,5 +22,4 @@ Route::get('/index/relatoriomes', [CadastroController::class, 'relatoriomes'])->
 
 Route::post('/cadastro', [CadastroController::class, 'store'])->name('NovoCadastro.store');
 
-Route::delete('/registros/{id}', [CadastroController::class, 'destroy'])->name('deletarRegistro');
-
+Route::delete('/index/{id}', [CadastroController::class, 'destroy'])->name('index.delete');

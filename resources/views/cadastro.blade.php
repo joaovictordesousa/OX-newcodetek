@@ -17,12 +17,12 @@
       <option value="Brahman">Brahman</option>
       <option value="Brangus">Brangus</option>
       <option value="Senepol">Senepol</option>
-      <option value="Senepol">Hereford</option>
-      <option value="Senepol">Angus</option>
-      <option value="Senepol">Tabapuã</option>
-      <option value="Senepol">Gir</option>
-      <option value="Senepol">Gir leiteiro</option>
-      <option value="Senepol">Caracu</option>
+      <option value="Hereford">Hereford</option>
+      <option value="Angus">Angus</option>
+      <option value="Tabapuã">Tabapuã</option>
+      <option value="Gir">Gir</option>
+      <option value="Gir leitei">Gir leiteiro</option>
+      <option value="Caracu">Caracu</option>
     </select>
     </div>
 

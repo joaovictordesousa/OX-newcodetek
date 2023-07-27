@@ -15,9 +15,10 @@ class CadastroController extends Controller
 
      public function index()
      {
-        $registro = Registro::paginate(10);
-
+        $registro = Registro::paginate(10); //paginate junto com o all antes era isso ( $registro = cadastroanimais::all(); )
+        $registro = Registro::all();
         // Passe os registros para a view "index.blade.php"
+
         return view('index', [
             'registro' => $registro
         ]);
@@ -101,6 +102,17 @@ class CadastroController extends Controller
      */
     public function destroy(string $id)
     {
+        $registro = Registro::find($id);
 
+        if (!$registro) {
+            return redirect()->route('cadastros.index')->with('error', 'Registro não encontrado.');
+        }
+
+        // Excluir o registro
+        $registro->delete();
+
+        return redirect()->route('cadastros.index')->with('success', 'Registro excluído com sucesso.');
     }
+    
+
 }
