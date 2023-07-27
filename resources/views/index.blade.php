@@ -11,57 +11,67 @@
     </script>
 @endif
 
-    <main class="col-md-9 ms-sm-5 col-lg-10 px-md-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+<main class="col-md-9 ms-sm-5 col-lg-10 px-md-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <div class="btn-toolbar mb-2 mb-md-0">
-          <div class="btn-group me-2">
-          </div>
+            <div class="btn-group me-2">
+            </div>
         </div>
-      </div>
-      
-      <br><br>
+    </div>
 
-      <h2 class="titulo_historico_animais">Historico de animais</h2>
-      <div class="table-responsive small">
+    <br><br>
+
+    <h2 class="titulo_historico_animais">Historico de animais</h2>
+    <div class="table-responsive small">
         <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th>Numero do Animal</th>
-              <th>Dia do inseminação</th>
-              <th>Raça do boi</th>
-              <th>Data prevista para parir</th>
-              <th>Editar</th>
-              <th>Deletar</th>
-            </tr>
-          </thead>
-          <tbody>
-            @foreach($registro as $regis)
-            <tr>
-              <td>{{ $regis->nranimal }}</td>
-              <td>{{ $regis->racaboi }}</td>
-              <td>{{ $regis->dtinseminacao }}</td>
-              <td>{{ $regis->dtprevista }}</td>
-              <td>
-                <a type="button" class="btn btn-secondary">Editar</a>
-              </td>
-              
-              <td>
-                <form action="{{ route('index.delete', ['registro' => $registro->id]) }}" method="POST">
-                  @csrf
-                  <button type="submit" class="btn btn-danger">Deletar</button>
-              </form>        
-              
-              </td>
-            </tr>
-            @endforeach
-          </tbody>
+
+            <thead>
+                <tr>
+                    <th>Nome ou
+                        Nº da Vaca</th>
+                    <th>Nome ou Nº
+                        do Touro</th>
+                    <th>Nome do
+                        Inseminador</th>
+                    <th>Data da
+                        Inseminação</th>
+                    <th>Ver</th>
+                    <th>Editar</th>
+                    <th>Deletar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($AllSheet as $sheet)
+                    <tr>
+                        <td>{{ $sheet->tag }}</td>
+                        <td>{{ $sheet->bull_tag }}</td>
+                        <td>{{ $sheet->inseminator_name }}</td>
+                        <td>{{ $sheet->insemination_date }}</td>
+                        <td>
+                            <a type="button" class="btn btn-secondary"
+                                href="{{ route('sheet.show', ['sheet' => $sheet->id]) }}">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </a>
+                        </td>
+                        <td>
+                            <a type="button" class="btn btn-secondary"
+                                href="{{ route('sheet.edit', ['sheet' => $sheet->id]) }}"><ion-icon name="pencil-outline"></ion-icon></a>
+                        </td>
+
+                        <td>
+                            <a type="button" class="btn btn-danger"><ion-icon name="trash-outline"></ion-icon></a>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+
         </table>
-        {{$registro->appends([
+        {{-- {{$AllSheet->appends([
           'search' => request()->get('search','')
-       ])->links()}}
-      </div>
-    </main>
-  </div>
+       ])->links()}} --}}
+    </div>
+</main>
+</div>
 </div>
 
 @yield('scripts')
@@ -70,4 +80,5 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
 
 </body>
+
 </html>
