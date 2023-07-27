@@ -1,6 +1,18 @@
 @include('cabecalho.cabecalho')
 
-<form action="{{ route('sheet.store') }}" method="POST" style="width: 50%;">
+<style>
+  #form_cadastro {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 700px) {
+    #form_cadastro {
+        width: 100%;
+    }
+}
+</style>
+
+<form action="{{ route('sheet.store') }}" method="POST" id="form_cadastro">
     @csrf
            <div class="row g-3" id="container_divs_cadastro">
             <div class="col-md-6">

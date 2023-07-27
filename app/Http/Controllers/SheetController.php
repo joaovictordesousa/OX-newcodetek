@@ -15,6 +15,11 @@ class SheetController extends Controller
         return view('index', ['AllSheet' => $AllSheet]);
     }
 
+    public function resultmes()
+    {
+        return view('resultmes');
+    }
+
     public function create()
     {
         return view('cadastro');
