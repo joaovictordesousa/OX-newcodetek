@@ -11,6 +11,7 @@ class SheetController extends Controller
     public function index()
     {
         $AllSheet = Sheet::all();
+        $AllSheet = Sheet::paginate(5);
         return view('index', ['AllSheet' => $AllSheet]);
     }
 

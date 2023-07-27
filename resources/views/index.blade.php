@@ -66,9 +66,9 @@
             </tbody>
 
         </table>
-        {{-- {{$AllSheet->appends([
+        {{$AllSheet->appends([
           'search' => request()->get('search','')
-       ])->links()}} --}}
+       ])->links()}}
     </div>
 </main>
 </div>
