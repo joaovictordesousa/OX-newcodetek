@@ -37,7 +37,7 @@ class Sheet extends Model
         $date = Carbon::parse($Insemination_date);
         $birthPrediction = $date->addMonths(9)->addDays(10);
        
-        return $birthPrediction->format('d/m/Y');
+        return $birthPrediction;
        
     } 
 

@@ -35,9 +35,10 @@
                         Inseminador</th>
                     <th>Data da
                         Inseminação</th>
-                    <th>Ver</th>
-                    <th>Editar</th>
-                    <th>Deletar</th>
+                        <th>Data de nascimento</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -46,7 +47,8 @@
                         <td>{{ $sheet->tag }}</td>
                         <td>{{ $sheet->bull_tag }}</td>
                         <td>{{ $sheet->inseminator_name }}</td>
-                        <td>{{ $sheet->insemination_date }}</td>
+                        <td>{{ $sheet->FormatDate($sheet->insemination_date) }}</td>
+                        <td>{{ $sheet->FormatDate($sheet->birth_prediction) }}</td>
                         <td>
                             <a type="button" class="btn btn-success"
                                 href="{{ route('sheet.show', ['sheet' => $sheet->id]) }}">

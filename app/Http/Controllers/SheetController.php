@@ -22,24 +22,23 @@ class SheetController extends Controller
 
     public function store(Request $request)
     {
-        $form = Sheet::FormatDate($request->insemination_date);
         $bithDate = Sheet::BirthPrediction($request->insemination_date);
-        
+
         $data = [
             'tag' => $request->input('tag'),
             'bull_tag' => $request->input('bull_tag'),
             'inseminator_name' => $request->input('inseminator_name'),
-            'insemination_date' => $form ,
+            'insemination_date' => $request->input('insemination_date'),
             'birth_prediction' => $bithDate
         ];
 
         $validator = Sheet::validateData($data);
 
         $validated = $validator->validated();
-        // dd($validated);
+       
         Sheet::create($validated);
 
-        return redirect()->route('sheet.index');
+        return redirect()->route('sheet.index')->with('success', 'Cadastrado com sucesso.');;
     }
 
     public function show(Sheet $sheet)
@@ -56,14 +55,14 @@ class SheetController extends Controller
 
     public function update(Request $request, string $id)
     {
-        $form = Sheet::FormatDate($request->insemination_date);
+        
         $bithDate = Sheet::BirthPrediction($request->insemination_date);
         
         $data = [
             'tag' => $request->input('tag'),
             'bull_tag' => $request->input('bull_tag'),
             'inseminator_name' => $request->input('inseminator_name'),
-            'insemination_date' => $form ,
+            'insemination_date' => $request->input('insemination_date'),
             'birth_prediction' => $bithDate
         ];
 
