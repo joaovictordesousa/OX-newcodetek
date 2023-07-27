@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('tag');
             $table->string('bull_tag');
             $table->string('inseminator_name');
-            $table->string('insemination_date');
-            $table->string('birth_prediction');
+            $table->date('insemination_date');
+            $table->date('birth_prediction');
             $table->timestamps();
         });
     }

@@ -29,25 +29,37 @@ class ReportController extends Controller
      */
     public function GetReports(Request $request)
     {
-        $dataInicial = Carbon::createFromFormat('Y-m-d', $request->input('data_inicial'))->format('d/m/Y');
-        $dataFinal = Carbon::createFromFormat('Y-m-d', $request->input('data_final'))->format('d/m/Y');
-    
-        $results = Sheet::where('birth_prediction', [$dataInicial, $dataFinal])->get();
-       
 
-        print($results);
 
-    //     return redirect()->route('report.results', [
-    //         'results' => $results->id
-    // ]);
+        $startDate = $request->input('startDate');
+        $endDate = $request->input('endDate');
+
+        
+        if (!$startDate || !$endDate) {
+            return redirect()->back()->with('error', 'Por favor, informe as datas corretamente.');
+        }
+
+        
+        $startDate = Carbon::parse($startDate)->startOfDay();
+        $endDate = Carbon::parse($endDate)->endOfDay();
+
+        $results = Sheet::whereBetween('birth_prediction', [$startDate, $endDate])->get();
+
+
+
+        print(count($results));
+
+        //     return redirect()->route('report.results', [
+        //         'results' => $results->id
+        // ]);
     }
 
     /**
      * Display the specified resource.
      */
-    public function results(String $id )
+    public function results(string $id)
     {
-      
+
     }
 
     /**

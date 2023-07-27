@@ -10,9 +10,9 @@
     <div class="col-12"> 
     <label for="inputAddress" class="form-label">Data do relatorio</label>
     <div class="input-group mb-3">
-        <input type="date" class="form-control" name="data_inicial">
+        <input type="date" class="form-control" name="startDate">
         <span class="input-group-text">a</span>
-        <input type="date" class="form-control" name="data_final">
+        <input type="date" class="form-control" name="endDate">
       </div>
     </div>
 
