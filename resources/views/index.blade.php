@@ -46,7 +46,11 @@
               </td>
               
               <td>
-                <a type="button" class="btn btn-danger">Editar</a>
+                <form action="{{ route('index.delete', ['registro' => $registro->id]) }}" method="POST">
+                  @csrf
+                  <button type="submit" class="btn btn-danger">Deletar</button>
+              </form>        
+              
               </td>
             </tr>
             @endforeach
@@ -63,7 +67,7 @@
 @yield('scripts')
 <script src="js/color-modes.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"     ></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
 
 </body>
 </html>
