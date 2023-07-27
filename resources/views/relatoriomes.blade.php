@@ -1,8 +1,21 @@
 @include('cabecalho.cabecalho')
 
+ <style>
+
+#form_retariomes {
+  width: 50%
+}
+@media screen and (max-width: 700px) {
+    #form_retariomes {
+        width: 100%;
+    }
+}
+
+ </style>
+
 <h1 class="titulo_relatoriomes">Relatorio do mês</h1>
 
-<form action="{{ route('report.GetReports') }}" class="row g-3" style="width: 70%" method="POST">
+<form action="{{ route('report.GetReports') }}" class="row g-3" style="" id="form_retariomes" method="POST">
     @csrf
     <div class="col-12"> 
     </div>
@@ -17,7 +30,7 @@
     </div>
 
     <div class="col-12">
-      <button type="submit" class="btn btn-primary">Imprimir</button>
+      <button type="submit" class="btn btn-primary">GERAR RELATORIO</button>
     </div>
   </form>
   
