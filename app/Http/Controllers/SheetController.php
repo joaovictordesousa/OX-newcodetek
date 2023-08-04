@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Sheet;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 
 class SheetController extends Controller
@@ -13,11 +14,6 @@ class SheetController extends Controller
         $AllSheet = Sheet::all();
         $AllSheet = Sheet::paginate(5);
         return view('index', ['AllSheet' => $AllSheet]);
-    }
-
-    public function resultmes()
-    {
-        return view('resultmes');
     }
 
     public function create()
@@ -80,8 +76,10 @@ class SheetController extends Controller
         return redirect()->route('sheet.index');
     }
 
-    public function destroy(string $id)
+    public function pdf(Sheet $sheet)
     {
-        //
+        $pdf = Pdf::loadView('FichaPDF', ['sheet' => $sheet]);
+        // return $pdf->download('Ficha_completa.pdf');
+        return $pdf->stream('Ficha_completa.pdf');
     }
 }

@@ -1,7 +1,7 @@
 @include('cabecalho.cabecalho')
 
-    <div class="card" style="width: 50%; margin: 4em 10em;">
-        <div class="card-body text-center" >
+    <div class="card shadow" style="width: 50%; margin: 4em 10em;">
+        <div class="card-body text-center shadow" >
             <h4 class="card-title ">Ficha completa</h4>
             <div class="container">
                 <div class="row">
@@ -36,6 +36,7 @@
                 </div>
                 <br><br>
             <a href="{{ route('sheet.index') }}" class="btn btn-primary" style="padding: 10px 2em">Voltar</a>
+            <a href="{{ route('sheet.pdf', ['sheet' => $sheet]) }}" class="btn btn-success" target="_blank" style="padding: 10px 2em"><ion-icon name="download-outline"></ion-icon>Baixar PDF</a>
         </div>
     </div>
 </div>
