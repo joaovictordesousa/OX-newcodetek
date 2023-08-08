@@ -224,7 +224,8 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="{{ route('report.index') }}">
+                                <a class="nav-link d-flex align-items-center gap-2"
+                                    href="{{ route('report.index') }}">
                                     <svg class="bi">
                                         <use xlink:href="#cart" />
                                     </svg>
@@ -252,3 +253,7 @@
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
                 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
                 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+</body>
