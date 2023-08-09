@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.112.5">
-    <title>Cadastro Bovino</title>
+    <title>𝕆𝕏 - NewCodeTek</title>
 
     @yield('styles')
     <!-- Fazer as importações do css -->
@@ -163,20 +163,11 @@
     </svg>
 
     <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">Cadastro Bovino</a>
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">𝕆𝕏</a>
 
         <ul class="navbar-nav flex-row d-md-none">
             <li class="nav-item text-nowrap">
-                <button class="nav-link px-3 text-white" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false"
-                    aria-label="Toggle search">
-                    <svg class="bi">
-                        <use xlink:href="#search" />
-                    </svg>
-                </button>
-            </li>
-            <li class="nav-item text-nowrap">
-                <button class="nav-link px-3 text-white" type="button" data-bs-toggle="offcanvas"
+                <button class="nav-link px-3 text-black" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <svg class="bi">
@@ -224,7 +215,8 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="{{ route('report.index') }}">
+                                <a class="nav-link d-flex align-items-center gap-2"
+                                    href="{{ route('report.index') }}">
                                     <svg class="bi">
                                         <use xlink:href="#cart" />
                                     </svg>
@@ -252,3 +244,7 @@
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
                 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
                 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+</body>
