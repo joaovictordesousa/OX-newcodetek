@@ -9,23 +9,23 @@
                         <table class="table show_show">
                             <tbody>
                               <tr>
-                                <td><b>Nome ou Nº da Vaca:</b></td>
+                                <th><b>Nome ou Nº da Vaca:</b></th>
                                 <td>{{ $sheet->tag }}</td>
                               </tr>
                               <tr>
-                                <td><b>Nome ou Nº do Touro:</b></td>
+                                <th><b>Nome ou Nº do Touro:</b></th>
                                 <td>{{ $sheet->bull_tag }}</td>
                               </tr>
                               <tr>
-                                <td><b>Nome do Inseminador:</b></td>
+                                <th><b>Nome do Inseminador:</b></th>
                                 <td>{{ $sheet->inseminator_name }}</td>
                               </tr>
                               <tr>
-                                <td><b>Data da inseminação:</b></td>
+                                <th><b>Data da inseminação:</b></th>
                                 <td>{{ $sheet->insemination_date }}</td>
                               </tr>
                               <tr>
-                                <td><b>Data prevista para o nascimento:</b></td>
+                                <th><b>Data prevista para o nascimento:</b></th>
                                 <td>{{ $sheet->birth_prediction }}</td>
                               </tr>
                               <tr>

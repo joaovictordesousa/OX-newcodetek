@@ -2,11 +2,38 @@
 <html>
 <head>
     <title>Exemplo de PDF</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+    <style>
+
+        th {
+            border: 2px solid black;
+        }
+
+        td {
+            text-align: center;
+            gap: 10px;
+            font-size: 18px;
+        }
+
+        .cabecalho_pdf {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            margin: 0 0 3em 0;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2; /* Cor de fundo para linhas pares */
+        }
+        
+    </style>
+
+    <header class="cabecalho_pdf">
+        <h2 class="titulo_historico_animais">Relatório de prenhez</h2>
+    </header>
+
     <div class="container">
-        <h2 class="titulo_historico_animais">Animais com parto previsto para essa data:</h2>
         <table class="table table-hover text-center shadow">
             <thead class="table-dark">
                 <tr>

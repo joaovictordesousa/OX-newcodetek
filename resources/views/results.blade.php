@@ -1,5 +1,15 @@
 @include('cabecalho.cabecalho')
 
+<style>
+th {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+</style>
+
 <main class="col-md-9 ms-sm-5 col-lg-10 px-md-4">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <div class="btn-toolbar mb-2 mb-md-0">
@@ -9,7 +19,7 @@
     </div>
 
     <br><br>
-    <h2 class="titulo_historico_animais">Animais com parto previsto para essa data:</h2>
+    <h2 class="titulo_historico_animais">Previsão de parto dos animais para esta data:</h2>
     <div class="table-responsive small">
         <table class="table table-striped table-sm">
 
@@ -53,3 +63,4 @@
 </body>
 
 </html>
+<br><br><br><br>

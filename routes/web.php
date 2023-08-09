@@ -23,7 +23,7 @@ Route::get('/home/{sheet}/show', [SheetController::class, 'show'])->name('sheet.
 Route::get('/home/{sheet}/edit', [SheetController::class, 'edit'])->name('sheet.edit');
 Route::put('/home/{sheet}', [SheetController::class, 'update'])->name('sheet.update');
 Route::get('/home/pdf/{sheet}', [SheetController::class, 'pdf'])->name('sheet.pdf');
-
+Route::delete('/sheet/{sheet}', [SheetController::class, 'destroy'])->name('sheet.destroy');
 
 
 Route::get('/report', [ReportController::class, 'index'])->name('report.index');

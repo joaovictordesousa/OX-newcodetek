@@ -33,7 +33,7 @@
                     <th>Data da Inseminação</th>
                     <th>Data de nascimento</th>
                     <th></th>
-                    <th></th>
+                    <th>Ações</th>
                     <th></th>
                 </tr>
             </thead>
@@ -57,7 +57,11 @@
                         </td>
 
                         <td>
-                            <a type="button" class="btn btn-danger"><ion-icon name="trash-outline"></ion-icon></a>
+                            <form action="{{ route('sheet.destroy', ['sheet' => $sheet->id]) }}" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir?')">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger"><ion-icon name="trash-outline"></ion-icon></button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach

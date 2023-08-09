@@ -12,7 +12,7 @@ class SheetController extends Controller
     public function index()
     {
         $AllSheet = Sheet::all();
-        $AllSheet = Sheet::paginate(5);
+        $AllSheet = Sheet::paginate(10);
         return view('index', ['AllSheet' => $AllSheet]);
     }
 
@@ -75,6 +75,14 @@ class SheetController extends Controller
 
         return redirect()->route('sheet.index');
     }
+
+    public function destroy(Sheet $sheet)
+{
+    $sheet->delete();
+    
+    return redirect()->route('sheet.index')->with('success', 'Registro excluído com sucesso.');
+}
+
 
     public function pdf(Sheet $sheet)
     {
