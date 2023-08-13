@@ -1,12 +1,33 @@
 @include('cabecalho.cabecalho')
 
-    <div class="card shadow" style="width: 50%; margin: 4em 10em;">
+<style>
+  #container_show {
+    width: 50%;
+    margin: 4em 10em;
+  }
+
+  @media screen and (max-width: 600px) {
+    #container_show {
+      width: 100%;
+      text-align: none;
+      margin: 0 auto;
+    }
+
+    #show_show {
+      width: 100%;
+    }
+    
+  }
+</style>
+
+
+    <div class="card shadow" id="container_show">
         <div class="card-body text-center shadow" >
             <h4 class="card-title ">Ficha completa</h4>
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <table class="table show_show">
+                        <table class="table" id="show_show">
                             <tbody>
                               <tr>
                                 <th><b>Nome ou Nº da Vaca:</b></th>

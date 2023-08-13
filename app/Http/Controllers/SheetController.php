@@ -12,7 +12,7 @@ class SheetController extends Controller
     public function index()
     {
         $AllSheet = Sheet::all();
-        $AllSheet = Sheet::paginate(10);
+        $AllSheet = Sheet::orderBy('id', 'desc')->paginate(13);
         return view('index', ['AllSheet' => $AllSheet]);
     }
 

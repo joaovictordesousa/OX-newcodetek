@@ -1,9 +1,25 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href="../icones/vaca2.png">
+    <title>OX - NewCodeTek</title>
 </head>
 
 <style>
     /* Estilos gerais para a tabela */
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container_header_ficha {
+        background-color: rgb(3, 210, 3); 
+        background: url();
+    }
+
+    .titulo_pdf_ficha {
+        font-family: 'Borel', cursive;
+    }
+
     table {
         width: 100%;
         border-collapse: collapse;
@@ -34,10 +50,16 @@
 
     /* Estilos para o título "Ficha completa" */
     h4 {
-        font-size: 18px;
+        text-align: center;
+        font-size: 26px;
         margin-bottom: 10px;
+        margin: 2em 0;
     }
 </style>
+
+<header class="container_header_ficha">
+    <h1 class="titulo_pdf_ficha">Fazenda Trombas</h1><hr>
+</header>
 
 <div>
     <div>
