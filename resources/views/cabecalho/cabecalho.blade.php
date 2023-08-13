@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.112.5">
+    <link rel="icon" href="{{ asset('icones/vaca2.png') }}">
     <title>𝕆𝕏 - NewCodeTek</title>
 
     @yield('styles')

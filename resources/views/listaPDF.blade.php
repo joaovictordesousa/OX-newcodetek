@@ -26,14 +26,23 @@
         tbody tr:nth-child(even) {
             background-color: #f2f2f2; /* Cor de fundo para linhas pares */
         }
+
+        .titulo_relatorio_ficha {
+            border: 1px solid gray;
+            width: 100%;
+            text-align: center;
+            margin: 0 0 1em 0;
+            background-color: rgb(174, 173, 173);
+        }
         
     </style>
 
     <header class="cabecalho_pdf">
-        <h2 class="titulo_historico_animais">Relatório de prenhez</h2>
+        <h1 class="titulo_lista_animais">Fazenda Trombas</h1><hr>
     </header>
 
     <div class="container">
+        <h2 class="titulo_relatorio_ficha">Relatório de prenhez</h2>
         <table class="table table-hover text-center shadow">
             <thead class="table-dark">
                 <tr>
