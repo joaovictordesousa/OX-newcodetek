@@ -30,7 +30,9 @@ class SheetController extends Controller
             'bull_tag' => $request->input('bull_tag'),
             'inseminator_name' => $request->input('inseminator_name'),
             'insemination_date' => $request->input('insemination_date'),
-            'birth_prediction' => $bithDate
+            'birth_prediction' => $bithDate,
+            'obsinseminacao' => $request->input('obsinseminacao'),
+
         ];
 
         $validator = Sheet::validateData($data);

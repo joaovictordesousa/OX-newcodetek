@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('inseminator_name');
             $table->date('insemination_date');
             $table->date('birth_prediction');
+            $table->string('obsinseminacao')->nullable();
             $table->timestamps();
         });
     }
