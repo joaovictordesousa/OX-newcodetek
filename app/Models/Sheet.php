@@ -16,7 +16,8 @@ class Sheet extends Model
         'bull_tag',
         'inseminator_name',
         'insemination_date',
-        'birth_prediction'
+        'birth_prediction',
+        'obsinseminacao'
     ];
 
     public static function validateData($data)
@@ -26,7 +27,8 @@ class Sheet extends Model
             'bull_tag' => 'required|string|max:255', 
             'inseminator_name' => 'required|string|max:255', 
             'insemination_date' => 'required', 
-            'birth_prediction' => 'required'
+            'birth_prediction' => 'required',
+            'obsinseminacao' => ''
         ];
 
         return Validator::make($data, $rules);
