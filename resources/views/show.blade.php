@@ -35,11 +35,11 @@
                               </tr>
                               <tr>
                                 <th><b>Nome ou Nº do Touro:</b></th>
-                                <td>{{ $sheet->bull_tag }}</td>
+                                <td>{{ $sheet->Racadotouro->bull_tag }}</td>
                               </tr>
                               <tr>
                                 <th><b>Nome do Inseminador:</b></th>
-                                <td>{{ $sheet->inseminator_name }}</td>
+                                <td>{{ $sheet->Inseminador->name }}</td>
                               </tr>
                               <tr>
                                 <th><b>Data da inseminação:</b></th>
@@ -50,7 +50,9 @@
                                 <td>{{ $sheet->birth_prediction }}</td>
                               </tr>
                               <tr>
-                
+                                <th><b>Observação:</b></th>
+                                <td>{{ $sheet->obsinseminacao }}</td>
+                              </tr>               
                             </tbody>
                           </table>
                     </div>

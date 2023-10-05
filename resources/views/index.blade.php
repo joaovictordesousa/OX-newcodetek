@@ -1,5 +1,12 @@
 @include('cabecalho.cabecalho')
 
+<style>
+    title {
+        background-color: red;
+        color: darkgreen;
+    }
+</style>
+
 @if (session('success'))
     <div class="alert alert-primary">
         {{ session('success') }}
@@ -41,26 +48,26 @@
                 @foreach ($AllSheet as $sheet)
                     <tr>
                         <td>{{ $sheet->tag }}</td>
-                        <td>{{ $sheet->bull_tag }}</td>
-                        <td>{{ $sheet->inseminator_name }}</td>
+                        <td>{{ $sheet->Racadotouro->bull_tag }}</td>
+                        <td>{{ $sheet->Inseminador->name }}</td>
                         <td>{{ $sheet->FormatDate($sheet->insemination_date) }}</td>
                         <td>{{ $sheet->FormatDate($sheet->birth_prediction) }}</td>
                         <td>
                             <a type="button" class="btn btn-success"
-                                href="{{ route('sheet.show', ['sheet' => $sheet->id]) }}">
+                                href="{{ route('sheet.show', ['sheet' => $sheet->id]) }}" title="Ver mais">
                                 <ion-icon name="eye-outline"></ion-icon>
                             </a>
                         </td>
                         <td>
                             <a type="button" class="btn btn-primary"
-                                href="{{ route('sheet.edit', ['sheet' => $sheet->id]) }}"><ion-icon name="pencil-outline"></ion-icon></a>
+                                href="{{ route('sheet.edit', ['sheet' => $sheet->id]) }}" title="Editar"><ion-icon name="pencil-outline"></ion-icon></a>
                         </td>
 
                         <td>
                             <form action="{{ route('sheet.destroy', ['sheet' => $sheet->id]) }}" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir?')">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger"><ion-icon name="trash-outline"></ion-icon></button>
+                                <button type="submit" class="btn btn-danger" title="Excluir"><ion-icon name="trash-outline"></ion-icon></button>
                             </form>
                         </td>
                     </tr>

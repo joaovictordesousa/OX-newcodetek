@@ -57,8 +57,8 @@
                 @foreach ($data as $item)
                     <tr>
                         <td>{{ $item->tag }}</td>
-                        <td>{{ $item->bull_tag }}</td>
-                        <td>{{ $item->inseminator_name }}</td>
+                        <td>{{ $item->Racadotouro->bull_tag }}</td>
+                        <td>{{ $item->Inseminador->name }}</td>
                         <td>{{ $item->FormatDate($item->insemination_date) }}</td>
                         <td>{{ $item->FormatDate($item->birth_prediction) }}</td>
                     </tr>
