@@ -4,20 +4,19 @@
     height: 1rem;
   }
 
+  #link_cabecalho {
+    font-size: 15px;
+    color: white;
+  }
+
+  #barralateral {
+    height: 880px;
+  }
+
   /*
    * Sidebar
    */
-  
-  @media (min-width: 768px) {
-    .sidebar .offcanvas-lg {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 48px;
-    }
-    .navbar-search {
-      display: block;
-    }
-  }
+
   
   .sidebar .nav-link {
     font-size: .875rem;
@@ -25,7 +24,7 @@
   }
   
   .sidebar .nav-link.active {
-    color: #2470dc;
+    color: white;
   }
   
   .sidebar-heading {
@@ -45,4 +44,23 @@
   
   .navbar .form-control {
     padding: .75rem 1rem;
+  }
+
+    @media (min-width: 768px) {
+    .sidebar .offcanvas-lg {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 48px;
+    }
+    .navbar-search {
+      display: block;
+    }
+    
+  }
+
+  
+  @media (max-width: 768px) {
+    #barralateral {
+      height: 0;
+    }
   }

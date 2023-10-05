@@ -26,6 +26,10 @@
 
 
     <style>
+        #barralateral {
+            background-color: rgb(85, 85, 85);
+            color: white
+        }
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -163,17 +167,17 @@
 
     </svg>
 
-    <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
+    <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark" id="navbar">
         <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">𝕆𝕏</a>
 
         <ul class="navbar-nav flex-row d-md-none">
             <li class="nav-item text-nowrap">
                 <button class="nav-link px-3 text-black" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <svg class="bi">
-                        <use xlink:href="#list" />
-                    </svg>
+                    aria-label="Toggle navigation" style="background-color: rgb(85, 85, 85)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                      </svg>
                 </button>
             </li>
         </ul>
@@ -187,7 +191,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
+            <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary" id="barralateral">
                 <div class="offcanvas-lg offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu"
                     aria-labelledby="sidebarMenuLabel">
                     <div class="offcanvas-header">
@@ -195,11 +199,11 @@
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                             data-bs-target="#sidebarMenu" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
+                    <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto" >
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page"
-                                    href="{{ route('sheet.index') }}">
+                                    href="{{ route('sheet.index') }}" id="link_cabecalho">
                                     <svg class="bi">
                                         <use xlink:href="#house-fill" />
                                     </svg>
@@ -208,7 +212,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link d-flex align-items-center gap-2"
-                                    href="{{ route('sheet.create') }}">
+                                    href="{{ route('sheet.create') }}" id="link_cabecalho">
                                     <svg class="bi">
                                         <use xlink:href="#file-earmark" />
                                     </svg>
@@ -217,7 +221,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link d-flex align-items-center gap-2"
-                                    href="{{ route('report.index') }}">
+                                    href="{{ route('report.index') }}" id="link_cabecalho">
                                     <svg class="bi">
                                         <use xlink:href="#cart" />
                                     </svg>
@@ -225,11 +229,11 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                <a class="nav-link d-flex align-items-center gap-2" href="#" id="link_cabecalho">
                                     <svg class="bi">
                                         <use xlink:href="#people" />
                                     </svg>
-                                    Relatorio anual
+                                    Cadastro de bezerros
                                 </a>
                             </li>
                         </ul>

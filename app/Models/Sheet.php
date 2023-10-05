@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use \Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Sheet extends Model
 {
@@ -28,7 +29,7 @@ class Sheet extends Model
             'inseminator_name' => 'required|string|max:255', 
             'insemination_date' => 'required', 
             'birth_prediction' => 'required',
-            'obsinseminacao' => ''
+            'obsinseminacao' => 'nullable'
         ];
 
         return Validator::make($data, $rules);
@@ -48,4 +49,15 @@ class Sheet extends Model
         $FormattedDate = Carbon::parse($Insemination_date); 
         return $FormattedDate->format('d/m/Y');
     }
+    
+    public function Inseminador(): BelongsTo {
+        return $this->belongsTo(Inseminador::class, 'inseminator_name'); 
+        // Aqui eu tenho que passar no nome do compo da view Sheet, que é 'inseminator_name'. 
+    }
+
+    public function Racadotouro(): BelongsTo {
+        return $this->belongsTo(Racadotouro::class, 'bull_tag'); 
+        // Aqui eu tenho que passar no nome do compo da view Sheet, que é 'inseminator_name'. 
+    }
+    
 }

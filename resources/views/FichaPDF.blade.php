@@ -75,11 +75,11 @@
                             </tr>
                             <tr>
                                 <td><b>Nome ou Nº do Touro:</b></td>
-                                <td>{{ $sheet->bull_tag }}</td>
+                                <td>{{ $sheet->Racadotouro->bull_tag }}</td>
                             </tr>
                             <tr>
                                 <td><b>Nome do Inseminador:</b></td>
-                                <td>{{ $sheet->inseminator_name }}</td>
+                                <td>{{ $sheet->Inseminador->name }}</td>
                             </tr>
                             <tr>
                                 <td><b>Data da inseminação:</b></td>

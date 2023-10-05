@@ -39,8 +39,8 @@ td {
                 @foreach ($results as $sheet)
                     <tr>
                         <td>{{ $sheet->tag }}</td>
-                        <td>{{ $sheet->bull_tag }}</td>
-                        <td>{{ $sheet->inseminator_name }}</td>
+                        <td>{{ $sheet->Racadotouro->bull_tag }}</td>
+                        <td>{{ $sheet->Inseminador->name }}</td>
                         <td>{{ $sheet->FormatDate($sheet->insemination_date) }}</td>
                         <td>{{ $sheet->FormatDate($sheet->birth_prediction) }}</td>
                     </tr>
