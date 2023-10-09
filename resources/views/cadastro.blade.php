@@ -53,6 +53,6 @@
 
         <div class="col-12">
             <button type="submit" class="btn btn-success">CADASTRAR</button>
-            <a href="{{ route('sheet.index') }}" class="btn btn-danger">CANCELAR</a>
+            <a href="{{ route('sheet.dashboard') }}" class="btn btn-danger">CANCELAR</a>
         </div>
 </form>

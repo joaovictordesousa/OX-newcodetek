@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <br><br>
-            <a href="{{ route('sheet.index') }}" class="btn btn-primary" style="padding: 10px 2em">Voltar</a>
+            <a href="{{ route('sheet.dashboard') }}" class="btn btn-primary" style="padding: 10px 2em">Voltar</a>
             <a href="{{ route('sheet.pdf', ['sheet' => $sheet]) }}" class="btn btn-success" target="_blank" style="padding: 10px 2em"><ion-icon name="download-outline"></ion-icon>Baixar PDF</a>
         </div>
     </div>

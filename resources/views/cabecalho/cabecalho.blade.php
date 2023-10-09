@@ -204,7 +204,7 @@
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page"
-                                    href="{{ route('sheet.index') }}" id="link_cabecalho">
+                                    href="{{ route('sheet.dashboard') }}" id="link_cabecalho">
                                     <svg class="bi">
                                         <use xlink:href="#house-fill" />
                                     </svg>
@@ -222,7 +222,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link d-flex align-items-center gap-2"
-                                    href="{{ route('report.index') }}" id="link_cabecalho">
+                                    href="{{ route('report.dashboard') }}" id="link_cabecalho">
                                     <svg class="bi">
                                         <use xlink:href="#cart" />
                                     </svg>
