@@ -232,9 +232,27 @@
                             <li class="nav-item">
                                 <a class="nav-link d-flex align-items-center gap-2" href="{{ route('bezerros.cadastrosbezerros') }}" id="link_cabecalho">
                                     <svg class="bi">
-                                        <use xlink:href="#people" />
+                                        <use xlink:href="#file-earmark" />
                                     </svg>
                                     Cadastro de bezerros
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-2" href="{{ route('touro.cadastratouro') }}" id="link_cabecalho">
+                                    <svg class="bi">
+                                        <use xlink:href="#file-earmark" />
+                                    </svg>
+                                    Cadastro Touro
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-2" href="{{ route('inseminador.cadastrainseminador') }}" id="link_cabecalho">
+                                    <svg class="bi">
+                                        <use xlink:href="#file-earmark" />
+                                    </svg>
+                                    Cadastro Inseminador
                                 </a>
                             </li>
                         </ul>

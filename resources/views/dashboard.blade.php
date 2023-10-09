@@ -5,6 +5,13 @@
         background-color: red;
         color: darkgreen;
     }
+    td {
+        text-align: center;
+    }
+
+    th {
+        text-align: center;
+    }
 </style>
 
 @if (session('success'))

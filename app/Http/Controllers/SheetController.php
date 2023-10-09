@@ -11,7 +11,7 @@ use Barryvdh\DomPDF\Facade\Pdf;
 
 class SheetController extends Controller
 {
-    public function dashboard()
+    public function index()
     {
         $AllSheet = Sheet::all();
         $AllSheet = Sheet::orderBy('id', 'desc')->paginate(13);
