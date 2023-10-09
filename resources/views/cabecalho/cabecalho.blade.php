@@ -28,8 +28,9 @@
     <style>
         #barralateral {
             background-color: rgb(85, 85, 85);
-            color: white
+            color: white;
         }
+        
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -216,7 +217,7 @@
                                     <svg class="bi">
                                         <use xlink:href="#file-earmark" />
                                     </svg>
-                                    Cadastra animal
+                                    Cadastra bovino
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -229,7 +230,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="#" id="link_cabecalho">
+                                <a class="nav-link d-flex align-items-center gap-2" href="{{ route('bezerros.cadastrosbezerros') }}" id="link_cabecalho">
                                     <svg class="bi">
                                         <use xlink:href="#people" />
                                     </svg>
