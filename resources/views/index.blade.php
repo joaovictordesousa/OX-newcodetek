@@ -28,7 +28,7 @@
 
     <br><br>
 
-    <h2 class="titulo_historico_animais">Histórico de animais</h2>
+    <h2 class="titulo_historico_animais">Histórico bovino</h2>
     <div class="table-responsive small">
         <table class="table table-striped table-sm">
 

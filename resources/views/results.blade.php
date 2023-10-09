@@ -25,14 +25,11 @@ td {
 
             <thead>
                 <tr>
-                    <th>Nome ou Nº da Vaca</th>
-                    <th>Nome ou Nº do Touro</th>
+                    <th>Numero da Vaca</th>
+                    <th>Raça do Touro</th>
                     <th>Nome do Inseminador</th>
                     <th>Data da Inseminação</th>
                     <th>Data de nascimento</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>

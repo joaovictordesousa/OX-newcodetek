@@ -1,0 +1,10 @@
+.containerTitulo {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo_bezerros {
+    font-size: 35px;
+    display: inline-block; /* PARA A LINHA OCUPAR SOMENTE O TAMANHO DO TITULO */
+    border-bottom: 2px solid black;
+}

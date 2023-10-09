@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\BezerrosController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ResultsController;
 use App\Http\Controllers\SheetController;
@@ -25,12 +27,12 @@ Route::put('/home/{sheet}', [SheetController::class, 'update'])->name('sheet.upd
 Route::get('/home/pdf/{sheet}', [SheetController::class, 'pdf'])->name('sheet.pdf');
 Route::delete('/sheet/{sheet}', [SheetController::class, 'destroy'])->name('sheet.destroy');
 
-
 Route::get('/report', [ReportController::class, 'index'])->name('report.index');
 Route::post('/report', [ReportController::class, 'GetReports'])->name('report.GetReports');
 Route::get('/report/pdf', [ReportController::class, 'pdf'])->name('report.pdf');
-
 Route::get('/results', [ResultsController::class, 'results'])->name('results.index');
+// -----------------------------------------------------------------------------------
 
+Route::get('/cadastrosbezerros', [BezerrosController::class, 'index'])->name('bezerros.cadastrosbezerros');
 
 
