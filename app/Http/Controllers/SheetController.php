@@ -11,11 +11,11 @@ use Barryvdh\DomPDF\Facade\Pdf;
 
 class SheetController extends Controller
 {
-    public function index()
+    public function dashboard()
     {
         $AllSheet = Sheet::all();
         $AllSheet = Sheet::orderBy('id', 'desc')->paginate(13);
-        return view('index', ['AllSheet' => $AllSheet]);
+        return view('dashboard', ['AllSheet' => $AllSheet]);
     }
 
     public function create()
@@ -52,7 +52,7 @@ class SheetController extends Controller
         Sheet::create($validated);
 
 
-        return redirect()->route('sheet.index')->with('success', 'Cadastrado com sucesso.');
+        return redirect()->route('sheet.dashboard')->with('success', 'Cadastrado com sucesso.');
     }
 
     public function show(Sheet $sheet)
@@ -95,14 +95,14 @@ class SheetController extends Controller
         $validated = $validator->validated();
         Sheet::where('id', $id)->update($validated);
 
-        return redirect()->route('sheet.index');
+        return redirect()->route('sheet.dashboard');
     }
 
     public function destroy(Sheet $sheet)
     {
         $sheet->delete();
 
-        return redirect()->route('sheet.index')->with('success', 'Registro excluído com sucesso.');
+        return redirect()->route('sheet.dashboard')->with('success', 'Registro excluído com sucesso.');
     }
 
 

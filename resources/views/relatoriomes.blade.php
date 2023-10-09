@@ -36,7 +36,7 @@
 
     <div class="col-12">
         <button type="submit" class="btn btn-primary">GERAR RELATORIO</button>
-        <a href="{{ route('sheet.index') }}" class="btn btn-danger">CANCELAR</a>
+        <a href="{{ route('sheet.dashboard') }}" class="btn btn-danger">CANCELAR</a>
     </div>
 </form>
 

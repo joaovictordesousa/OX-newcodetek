@@ -13,7 +13,7 @@ class ReportController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function dashboard()
     {
         return view('relatoriomes');
     }
@@ -41,7 +41,7 @@ class ReportController extends Controller
         $results = Sheet::whereBetween('birth_prediction', [$startDate, $endDate])->get();
         Session::put('teste', $results);
         
-        return redirect()->route('results.index');
+        return redirect()->route('results.dashboard');
         
     }
     
