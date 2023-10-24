@@ -2,7 +2,7 @@
 
 <style>
         #campo_tabela_insemi {
-        width: 20%
+        width: 40%
     }
 
     th {
@@ -11,6 +11,12 @@
 
     td {
         text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        #campo_tabela_insemi {
+        width: 100%
+    }
     }
 </style>
 

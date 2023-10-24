@@ -30,13 +30,36 @@
             background-color: rgb(85, 85, 85);
             color: white;
         }
-        
+
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
             -webkit-user-select: none;
             -moz-user-select: none;
             user-select: none;
+        }
+
+        #link_cabecalho {
+            font-size: 15px;
+            color: white;
+        }
+
+        #link_cabecalho.active {
+            background-color: #007BFF;
+            /* Cor de destaque para a página atual */
+            color: #FFF;
+            /* Cor do texto na página atual */
+        }
+
+        #link_cabecalho:not(.active) {
+            display: none;
+            /* Oculta todos os links que não são marcados como ativos */
+        }
+
+        @media (max-width: 708px) {
+            #link_cabecalho {
+                color: black;
+            }
         }
 
         @media (min-width: 768px) {
@@ -176,9 +199,11 @@
                 <button class="nav-link px-3 text-black" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
                     aria-label="Toggle navigation" style="background-color: rgb(85, 85, 85)">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
-                      </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-justify" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                    </svg>
                 </button>
             </li>
         </ul>
@@ -200,7 +225,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                             data-bs-target="#sidebarMenu" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto" >
+                    <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page"
@@ -212,8 +237,8 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2"
-                                    href="{{ route('sheet.create') }}" id="link_cabecalho">
+                                <a class="nav-link d-flex align-items-center gap-2" href="{{ route('sheet.create') }}"
+                                    id="link_cabecalho">
                                     <svg class="bi">
                                         <use xlink:href="#file-earmark" />
                                     </svg>
@@ -229,17 +254,10 @@
                                     Relatorio mensal
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="{{ route('bezerros.cadastrosbezerros') }}" id="link_cabecalho">
-                                    <svg class="bi">
-                                        <use xlink:href="#file-earmark" />
-                                    </svg>
-                                    Cadastro de bezerros
-                                </a>
-                            </li>
 
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="{{ route('touro.cadastratouro') }}" id="link_cabecalho">
+                                <a class="nav-link d-flex align-items-center gap-2"
+                                    href="{{ route('touro.cadastratouro') }}" id="link_cabecalho">
                                     <svg class="bi">
                                         <use xlink:href="#file-earmark" />
                                     </svg>
@@ -248,7 +266,8 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="{{ route('inseminador.cadastrainseminador') }}" id="link_cabecalho">
+                                <a class="nav-link d-flex align-items-center gap-2"
+                                    href="{{ route('inseminador.cadastrainseminador') }}" id="link_cabecalho">
                                     <svg class="bi">
                                         <use xlink:href="#file-earmark" />
                                     </svg>
@@ -268,7 +287,16 @@
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
                 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
                 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const navLinks = document.querySelectorAll("#link_cabecalho");
 
-
-
+                        for (const link of navLinks) {
+                            link.classList.remove("active"); // Remove a classe "active" de todos os links
+                            if (link.href === window.location.href) {
+                                link.classList.add("active"); // Adiciona a classe "active" apenas à página atual
+                            }
+                        }
+                    });
+                </script>
 </body>

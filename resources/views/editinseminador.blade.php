@@ -22,7 +22,7 @@
 
     <div class="col-12">
         <button type="submit" class="btn btn-success">ATUALIZAR</button>
-        <a href="{{ route('sheet.dashboard') }}" class="btn btn-danger">CANCELAR</a>
+        <a href="{{ route('inseminador.cadastrainseminador') }}" class="btn btn-danger">CANCELAR</a>
     </div>
 
 </form>
