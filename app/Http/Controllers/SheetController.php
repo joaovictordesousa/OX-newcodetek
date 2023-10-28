@@ -14,7 +14,7 @@ class SheetController extends Controller
     public function index()
     {
         $AllSheet = Sheet::all();
-        $AllSheet = Sheet::orderBy('id', 'desc')->paginate(13);
+        $AllSheet = Sheet::orderBy('id', 'desc')->paginate(13); //ESSE orderBy é para colocar os registrados por ultimo em primeiro logar na tabela
         return view('dashboard', ['AllSheet' => $AllSheet]);
     }
 

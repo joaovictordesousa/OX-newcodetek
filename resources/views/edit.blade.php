@@ -39,5 +39,6 @@
 
         <div class="col-12">
             <button type="submit" class="btn btn-primary">ATUALIZAR</button>
+            <a href="{{ route('sheet.dashboard') }}" class="btn btn-danger">CANCELAR</a>
         </div>
 </form>

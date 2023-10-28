@@ -34,7 +34,7 @@
                                 <td>{{ $sheet->tag }}</td>
                               </tr>
                               <tr>
-                                <th><b>Nome ou Nº do Touro:</b></th>
+                                <th><b>Raça do Touro</b></th>
                                 <td>{{ $sheet->Racadotouro->bull_tag }}</td>
                               </tr>
                               <tr>

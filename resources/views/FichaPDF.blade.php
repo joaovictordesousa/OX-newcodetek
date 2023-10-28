@@ -74,7 +74,7 @@
                                 <td>{{ $sheet->tag }}</td>
                             </tr>
                             <tr>
-                                <td><b>Nome ou Nº do Touro:</b></td>
+                                <td><b>Raça do Touro:</b></td>
                                 <td>{{ $sheet->Racadotouro->bull_tag }}</td>
                             </tr>
                             <tr>
@@ -89,6 +89,10 @@
                                 <td><b>Data prevista para o nascimento:</b></td>
                                 <td>{{ $sheet->birth_prediction }}</td>
                             </tr>
+                            <tr>
+                                <th><b>Observação:</b></th>
+                                <td>{{ $sheet->obsinseminacao }}</td>
+                              </tr>    
                         </tbody>
                     </table>
                 </div>
