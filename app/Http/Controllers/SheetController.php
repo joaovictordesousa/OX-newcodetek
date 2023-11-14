@@ -11,12 +11,21 @@ use Barryvdh\DomPDF\Facade\Pdf;
 
 class SheetController extends Controller
 {
-    public function index()
-    {
-        $AllSheet = Sheet::all();
-        $AllSheet = Sheet::orderBy('id', 'desc')->paginate(13); //ESSE orderBy é para colocar os registrados por ultimo em primeiro logar na tabela
-        return view('dashboard', ['AllSheet' => $AllSheet]);
+    public function index(Request $request)
+{
+    $search = $request->input('search', '');
+    $query = Sheet::query();
+
+    if (!empty($search)) {
+        $search = mb_strtolower($search, 'UTF-8');
+        $query->whereRaw('lower(tag) LIKE ?', ["%$search%"]);
     }
+    
+    $AllSheet = $query->orderBy('id', 'desc')->paginate(13);
+
+    return view('dashboard', ['AllSheet' => $AllSheet]);
+}
+
 
     public function create()
     {

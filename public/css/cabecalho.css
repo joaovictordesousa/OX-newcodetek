@@ -1,0 +1,44 @@
+title {
+    background-color: red;
+    color: darkgreen;
+}
+
+td {
+    text-align: center;
+}
+
+th {
+    text-align: center;
+}
+
+#barralateral {
+    height: 887px;
+}
+
+.navbar-brand {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25);
+}
+
+.navbar .form-control {
+    padding: 0.75rem 1rem;
+}
+
+@media (min-width: 768px) {
+    .sidebar .offcanvas-lg {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 48px;
+    }
+    .navbar-search {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    #barralateral {
+        height: 0;
+    }
+}
